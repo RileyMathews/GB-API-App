@@ -7,7 +7,7 @@
 const $ = require("jquery")
 const buildGameCard = require("./buildGameCard")
 
-const buildSearchResultsComponent = (results) => {
+const buildSearchResultsComponent = (search) => {
     //get dom elements
     const output = $("#search__output")
 
@@ -16,9 +16,9 @@ const buildSearchResultsComponent = (results) => {
 
     //clear out results field
     output.empty()
-    console.log(results)
 
-    results.results.forEach(result => {
+    //for each result
+    search.results.forEach(result => {
         const gameCard = buildGameCard(result)
         resultsFragment.append(gameCard)
     })

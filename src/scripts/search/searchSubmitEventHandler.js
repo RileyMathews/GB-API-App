@@ -11,7 +11,12 @@ const buildSearchResults = require("./buildSearchResultsComponent")
 const searchHandler = () => {
     //get dom elements
     const searchValue = $("#search__input").val()
-    console.log(searchValue)
+    const output = $("#search__output")
+
+    //clear output field of previous results
+    output.empty()
+    //put a waiting element in the output field
+    output.append("<h3>Waiting...</h3>")
     APIManager.getGameByTitle(searchValue)
         .then(response => buildSearchResults(response))
 }
