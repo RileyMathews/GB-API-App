@@ -12,7 +12,7 @@ const buildSearchResultsComponent = (search) => {
     const output = $("#search__output")
 
     //create virtual jquery element
-    const resultsFragment = $("<div></div>")
+    const resultsFragment = $("<div class=\"card-columns\">")
 
     //clear out results field
     output.empty()
