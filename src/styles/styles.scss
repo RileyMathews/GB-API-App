@@ -6,9 +6,9 @@ Project:
 comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Electronic&t=Grid
         
 */
-@import "node_modules/bulma/bulma";
 @import "02mixins";
 @import "03variables";
+@import "node_modules/bulma/bulma";
 @import "04defaults";
 @import "05grid-layout";
 @import "06media-queries";
